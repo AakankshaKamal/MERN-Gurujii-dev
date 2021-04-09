@@ -1139,6 +1139,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.5.5":
+  version "7.13.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
+  integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.10.4", "@babel/template@^7.12.7", "@babel/template@^7.4.0", "@babel/template@^7.8.6":
   version "7.12.7"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.12.7.tgz#c817233696018e39fbb6c491d2fb684e05ed43bc"
@@ -1240,6 +1247,42 @@
     find-root "^1.1.0"
     source-map "^0.7.2"
 
+"@emotion/cache@^10.0.27":
+  version "10.0.29"
+  resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
+  integrity sha512-fU2VtSVlHiF27empSbxi1O2JFdNWZO+2NFHfwO0pxgTep6Xa3uGb+3pVKfLww2l/IBGLNEZl5Xf/++A4wAYDYQ==
+  dependencies:
+    "@emotion/sheet" "0.9.4"
+    "@emotion/stylis" "0.8.5"
+    "@emotion/utils" "0.11.3"
+    "@emotion/weak-memoize" "0.2.5"
+
+"@emotion/core@^10.0.35":
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.1.1.tgz#c956c1365f2f2481960064bcb8c4732e5fb612c3"
+  integrity sha512-ZMLG6qpXR8x031NXD8HJqugy/AZSkAuMxxqB46pmAR7ze47MhNJ56cdoX243QPZdGctrdfo+s08yZTiwaUcRKA==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@emotion/cache" "^10.0.27"
+    "@emotion/css" "^10.0.27"
+    "@emotion/serialize" "^0.11.15"
+    "@emotion/sheet" "0.9.4"
+    "@emotion/utils" "0.11.3"
+
+"@emotion/css@^10.0.27":
+  version "10.0.27"
+  resolved "https://registry.yarnpkg.com/@emotion/css/-/css-10.0.27.tgz#3a7458198fbbebb53b01b2b87f64e5e21241e14c"
+  integrity sha512-6wZjsvYeBhyZQYNrGoR5yPMYbMBNEnanDrqmsqS1mzDm1cOTu12shvl2j4QHNS36UaTE0USIJawCH9C8oW34Zw==
+  dependencies:
+    "@emotion/serialize" "^0.11.15"
+    "@emotion/utils" "0.11.3"
+    babel-plugin-emotion "^10.0.27"
+
+"@emotion/hash@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
+  integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
+
 "@emotion/hash@^0.6.2", "@emotion/hash@^0.6.6":
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.6.6.tgz#62266c5f0eac6941fece302abad69f2ee7e25e44"
@@ -1262,6 +1305,17 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.6.tgz#004b98298d04c7ca3b4f50ca2035d4f60d2eed1b"
   integrity sha512-h4t4jFjtm1YV7UirAFuSuFGyLa+NNxjdkq6DpFLANNQY5rHueFZHVY+8Cu1HYVP6DrheB0kv4m5xPjo7eKT7yQ==
 
+"@emotion/serialize@^0.11.15", "@emotion/serialize@^0.11.16":
+  version "0.11.16"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.11.16.tgz#dee05f9e96ad2fb25a5206b6d759b2d1ed3379ad"
+  integrity sha512-G3J4o8by0VRrO+PFeSc3js2myYNOXVJ3Ya+RGVxnshRYgsvErfAOglKAiy1Eo1vhzxqtUvjCyS5gtewzkmvSSg==
+  dependencies:
+    "@emotion/hash" "0.8.0"
+    "@emotion/memoize" "0.7.4"
+    "@emotion/unitless" "0.7.5"
+    "@emotion/utils" "0.11.3"
+    csstype "^2.5.7"
+
 "@emotion/serialize@^0.9.1":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.9.1.tgz#a494982a6920730dba6303eb018220a2b629c145"
@@ -1272,30 +1326,45 @@
     "@emotion/unitless" "^0.6.7"
     "@emotion/utils" "^0.8.2"
 
+"@emotion/sheet@0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-0.9.4.tgz#894374bea39ec30f489bbfc3438192b9774d32e5"
+  integrity sha512-zM9PFmgVSqBw4zL101Q0HrBVTGmpAxFZH/pYx/cjJT5advXguvcgjHFTCaIO3enL/xr89vK2bh0Mfyj9aa0ANA==
+
+"@emotion/stylis@0.8.5", "@emotion/stylis@^0.8.4":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.8.5.tgz#deacb389bd6ee77d1e7fcaccce9e16c5c7e78e04"
+  integrity sha512-h6KtPihKFn3T9fuIrwvXXUOwlx3rfUvfZIcP5a6rh8Y7zjE3O06hT5Ss4S/YI1AYhuZ1kjaE/5EaOOI2NqSylQ==
+
 "@emotion/stylis@^0.7.0":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.7.1.tgz#50f63225e712d99e2b2b39c19c70fff023793ca5"
   integrity sha512-/SLmSIkN13M//53TtNxgxo57mcJk/UJIDFRKwOiLIBEyBHEcipgR6hNMQ/59Sl4VjCJ0Z/3zeAZyvnSLPG/1HQ==
 
-"@emotion/stylis@^0.8.4":
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.8.5.tgz#deacb389bd6ee77d1e7fcaccce9e16c5c7e78e04"
-  integrity sha512-h6KtPihKFn3T9fuIrwvXXUOwlx3rfUvfZIcP5a6rh8Y7zjE3O06hT5Ss4S/YI1AYhuZ1kjaE/5EaOOI2NqSylQ==
+"@emotion/unitless@0.7.5", "@emotion/unitless@^0.7.4":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
+  integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
 "@emotion/unitless@^0.6.2", "@emotion/unitless@^0.6.7":
   version "0.6.7"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.7.tgz#53e9f1892f725b194d5e6a1684a7b394df592397"
   integrity sha512-Arj1hncvEVqQ2p7Ega08uHLr1JuRYBuO5cIvcA+WWEQ5+VmkOE3ZXzl04NbQxeQpWX78G7u6MqxKuNX3wvYZxg==
 
-"@emotion/unitless@^0.7.4":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
-  integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
+"@emotion/utils@0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.11.3.tgz#a759863867befa7e583400d322652a3f44820924"
+  integrity sha512-0o4l6pZC+hI88+bzuaX/6BgOvQVhbt2PfmxauVaYOGgbsAw14wdKyvMCZXnsnsHys94iadcF+RG/wZyx6+ZZBw==
 
 "@emotion/utils@^0.8.2":
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.2.tgz#576ff7fb1230185b619a75d258cbc98f0867a8dc"
   integrity sha512-rLu3wcBWH4P5q1CGoSSH/i9hrXs7SlbRLkoq9IGuoPYNGQvDJ3pt/wmOM+XgYjIDRMVIdkUWt0RsfzF50JfnCw==
+
+"@emotion/weak-memoize@0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
+  integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -2528,6 +2597,22 @@ babel-plugin-dynamic-import-node@^2.3.3:
   integrity sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==
   dependencies:
     object.assign "^4.1.0"
+
+babel-plugin-emotion@^10.0.27:
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.2.2.tgz#a1fe3503cff80abfd0bdda14abd2e8e57a79d17d"
+  integrity sha512-SMSkGoqTbTyUTDeuVuPIWifPdUGkTk1Kf9BWRiXIOIcuyMfsdp2EjeiiFvOzX8NOBvEh/ypKYvUh2rkgAJMCLA==
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    "@emotion/hash" "0.8.0"
+    "@emotion/memoize" "0.7.4"
+    "@emotion/serialize" "^0.11.16"
+    babel-plugin-macros "^2.0.0"
+    babel-plugin-syntax-jsx "^6.18.0"
+    convert-source-map "^1.5.0"
+    escape-string-regexp "^1.0.5"
+    find-root "^1.1.0"
+    source-map "^0.5.7"
 
 babel-plugin-emotion@^9.2.11:
   version "9.2.11"
@@ -3911,6 +3996,11 @@ csstype@^2.5.2:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.14.tgz#004822a4050345b55ad4dcc00be1d9cf2f4296de"
   integrity sha512-2mSc+VEpGPblzAxyeR+vZhJKgYg0Og0nnRi7pmRXFYYxSfnOnW8A5wwQb4n4cE2nIOzqKOAzLCaEX6aBmNEv8A==
+
+csstype@^2.5.7:
+  version "2.6.16"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.16.tgz#544d69f547013b85a40d15bff75db38f34fe9c39"
+  integrity sha512-61FBWoDHp/gRtsoDkq/B1nWrCUG/ok1E3tUrcNbZjsE9Cxd9yzUirjS3+nAATB8U4cTtaQmAHbNndoFz5L6C9Q==
 
 csstype@^3.0.2:
   version "3.0.6"
@@ -9593,6 +9683,13 @@ react-simple-chatbot@^0.6.1:
     random-id "0.0.2"
     react "^16.4.1"
     react-dom "^16.4.1"
+
+react-spinners@^0.10.6:
+  version "0.10.6"
+  resolved "https://registry.yarnpkg.com/react-spinners/-/react-spinners-0.10.6.tgz#7e780144aaf54372231f6168ca075b4cd70e48ef"
+  integrity sha512-UPLcaMFhFnLWtS1zVDDT14ssW08gnZ44cjPN6GL27dEGboiCvRSthOilZXRDWESp449GB2iI6gjEbxzaMtA+dg==
+  dependencies:
+    "@emotion/core" "^10.0.35"
 
 react-star-rating-component@^1.4.1:
   version "1.4.1"
