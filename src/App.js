@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './components/home';
+import Review from './components/UserReview';
 import ChatBotComponent from './components/chatbot';
 import './App.css';
 import Board from './board.jpg';
@@ -9,6 +10,8 @@ import Footer from './components/Footer';
 
 import ClipLoader from 'react-spinners/ClockLoader';
 import SkewLoader from 'react-spinners/BounceLoader';
+import { Link } from 'react-router-dom';
+
 function App() {
   const [loading, setloading] = useState(false);
   useEffect(() => {
@@ -55,6 +58,7 @@ function App() {
             <br />
 
             <Route path='/' exact component={Home} />
+            <Route path='/reviews' component={Review} />
             <ChatBotComponent />
           </Router>
 
