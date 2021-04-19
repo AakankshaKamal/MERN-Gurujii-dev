@@ -10,20 +10,20 @@ import Footer from './components/Footer';
 import ClipLoader from 'react-spinners/ClockLoader';
 import SkewLoader from 'react-spinners/BounceLoader';
 function App() {
-  const [loading, setloading] = useState(false);
-  useEffect(() => {
-    setloading(true);
-    setTimeout(() => {
-      setloading(false);
-    }, 5000);
-  }, []);
+  const [loading, setloading] = useState(true);
+  // useEffect(() => {
+  //   setloading(true);
+  //   setTimeout(() => {
+  //     setloading(false);
+  //   }, 5000);
+  // }, []);
 
   return (
     <>
       {loading ? (
         <div className='splash'>
           <div className='logo'>
-            <ClipLoader color={' #ffb3b3'} loading={loading} size={200} />
+            <ClipLoader color={'#000033'} loading={loading} size={200} />
           </div>
 
           <div className='splash-screen'>
@@ -31,7 +31,7 @@ function App() {
             <b> GURUJI</b>
             <div className='loading-dot'>.</div>
             <div className='logo2'>
-              <ClipLoader color={' #ffb3b3'} loading={loading} size={200} />
+              <ClipLoader color={'#000033'} loading={loading} size={200} />
             </div>
           </div>
         </div>
